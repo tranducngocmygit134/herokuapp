@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+      <div class="login__info">
+        <form action="/users/signup" method="POST" class="signup--form">
+          <input type="text" placeholder="Họ và tên" required name="name" />
+          <input type="email" placeholder="Email" required name="email" />
+          <input
+            type="password"
+            placeholder="Mật khẩu"
+            required
+            name="password"
+          />
+          <input
+            type="password"
+            placeholder="Xác nhận lại mật khẩu"
+            requried
+            name="confirmPassword"
+          />
+          <button type="submit" class="auth__btn mt-large">Đăng ký</button>
+        </form>
+      </div>
+      > <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+      <section class="categories">
+        <div class="categories__card">
+          <div class="category">
+            <img
+              src="https://salt.tikicdn.com/cache/280x280/ts/product/9c/b5/f0/b28d76d875d5980bb23ee6ed62936a24.JPG"
+              alt="Laptop"
+              class="category__img"
+            />
+            <svg class="category__shop">
+              <use xlink:href="/css/icon.svg#icon-laptop"></use>
+            </svg>
+            <h3 class="category__name">Máy tính và phụ kiện</h3>
+            <h4 class="category__description">
+              Tổng hợp các loại máy tính, phụ kiện đa mẫu mã, giá cả hợp lý
+            </h4>
+            <a href="/products?category=laptop" class="category__link"
+              >Xem ngay</a
+            >
+          </div>
+          <div class="category">
+            <img
+              src="https://salt.tikicdn.com/cache/280x280/ts/product/22/6f/e3/3f45754a084ed11e4bbf1423e90df929.jpg"
+              alt="camera"
+              class="category__img"
+            />
+            <svg class="category__shop">
+              <use xlink:href="/css/icon.svg#icon-camera"></use>
+            </svg>
+            <h3 class="category__name">Máy ảnh và phụ kiện</h3>
+            <h4 class="category__description">
+              Tổng hợp các loại máy ảnh, phụ kiện đa mẫu mã, giá cả hợp lý
+            </h4>
+            <a href="/products?category=camera" class="category__link"
+              >Xem ngay</a
+            >
+          </div>
+          <div class="category">
+            <img
+              src="https://salt.tikicdn.com/cache/280x280/ts/product/e7/f9/79/d204695a3bf602ff5b2afb7b1731f1ef.jpg"
+              alt="Điện thoại, máy tính bảng..."
+              class="category__img"
+            />
+            <svg class="category__shop">
+              <use xlink:href="/css/icon.svg#icon-mobile"></use>
+            </svg>
+            <h3 class="category__name">Điện thoại, máy tính bảng</h3>
+            <h4 class="category__description">
+              Tổng hợp các loại điện thoại, máy tính bảng đa mẫu mã, giá cả hợp
+              lý
+            </h4>
+            <a href="/products?category=smartphone" class="category__link"
+              >Xem ngay
+            </a>
+          </div>
+        </div>
+      </section>
+      <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

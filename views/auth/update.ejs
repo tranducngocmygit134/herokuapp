@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+      <div class="update mt-hg mb-hg">
+        <div class="update__avatar">
+          <img src="<%=user.photo%>" alt="user avater" />
+        </div>
+        <div class="update__info">
+          <div class="content__box">
+            <div class="">Thông tin cá nhân</div>
+            <a href="/users/logout" class="update__info--logout">
+              <p class="mr-sm mb-0">Logout</p>
+              <svg class="icon__exit">
+                <use xlink:href="/css/icon.svg#icon-exit"></use>
+              </svg>
+            </a>
+          </div>
+          <div>Tên</div>
+          <div><%=user.name%></div>
+          <div>Ngày sinh</div>
+          <div><%=user.date_of_birth%></div>
+          <div>Giới tính</div>
+          <div><%=user.gender%></div>
+          <div>Quê quán</div>
+          <div><%=user.country%></div>
+          <div>Email</div>
+          <div><%=user.email%></div>
+          <div>Nghề nghiệp</div>
+          <div><%=user.job%></div>
+          <div>Công ty</div>
+          <div><%=user.company%></div>
+          <div>Sở thích</div>
+          <div><%=user.favorite%></div>
+        </div>
+        <div class="update__change">
+          <div class="content__box mt-large mb-sm">
+            Cập nhật thông tin cá nhân
+          </div>
+          <form action="/users/updateMe" method="POST">
+            <input type="text" placeholder="Cập nhật tên" name="name" />
+            <input
+              type="date"
+              placeholder="Cập nhật ngày sinh"
+              name="date_of_birth"
+            />
+            <input type="text" placeholder="Cập nhật quê quán" name="country" />
+            <input type="text" placeholder="Cập nhật email" name="email" />
+            <input type="text" placeholder="Cập nhật nghề nghiệp" name="job" />
+            <input type="text" placeholder="Cập nhật công ty" name="company" />
+            <input
+              type="text"
+              placeholder="Cập nhật sở thích"
+              name="favorite"
+            />
+            <input type="text" placeholder="Cập nhật avatar" name="photo" />
+            <button type="submit" class="auth__btn mt-large">Thay đổi</button>
+          </form>
+        </div>
+        <div class="update__password">
+          <div class="content__box mt-large mb-sm">
+            Cập nhật mật khẩu
+          </div>
+          <form action="/users/updateMe" method="POST">
+            <input type="text" placeholder="Mật khẩu cũ" name="country" />
+            <input type="password" placeholder="Mật khẩu mới" name="country" />
+            <input
+              type="password"
+              placeholder="Xác nhận lại mật khẩu mới"
+              name="email"
+            />
+            <button type="submit" class="auth__btn mt-large">Cập nhật</button>
+          </form>
+        </div>
+      </div>
+      > <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

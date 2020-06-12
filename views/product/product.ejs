@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+      <section class="categories">
+        <div class="categories__card">
+          <%for(let product of products) {%>
+          <div class="category">
+            <img
+              src="<%= product.thumbnail_url%>"
+              alt="Laptop"
+              class="category__img"
+            />
+            <svg class="category__shop">
+              <use xlink:href="/css/icon.svg#icon-laptop"></use>
+            </svg>
+            <h3 class="category__name"><%= product.brand_name%></h3>
+            <h4 class="category__description"><%= product.name%></h4>
+            <a href="/products/<%=product._id%>" class="category__link"
+              >Chi tiết</a
+            >
+          </div>
+          <%}%>
+        </div>
+        <%-include('../include/pagination.ejs')%>
+      </section>
+      <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

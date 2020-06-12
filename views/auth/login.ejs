@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+      <div class="login__info">
+        <form action="/users/login" method="POST">
+          <input type="email" placeholder="Email" required name="email" />
+          <input
+            type="password"
+            placeholder="Mật khẩu"
+            required
+            name="password"
+          />
+          <button type="submit" class="auth__btn mt-sm">Đăng nhập</button>
+          <div class="mt-sm">
+            <a href="/users/forgotPassword">Quên mật khẩu</a>
+            <a href="/users/signup">Đăng ký</a>
+          </div>
+        </form>
+      </div>
+      <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+      <section class="categories">
+        <div class="categories__card">
+          <%for(let product of products) {%>
+          <div class="category">
+            <img
+              src="<%= product.thumbnail_url%>"
+              alt="Laptop"
+              class="category__img"
+            />
+            <div class="discount">- <%=product.discountPercent%>%</div>
+            <h3 class="category__name"><%= product.brand_name%></h3>
+            <div class="category__price mb-sm">
+              <div>
+                <%=product.price.toFixed(1).replace(/\d(?=(\d{3})+\.)/g,
+                '$&,')%><sup>đ</sup>
+                <svg class="icon icon__price ml-1">
+                  <use xlink:href="/css/icon.svg#icon-dollar"></use>
+                </svg>
+              </div>
+              <div>
+                <%=product.rating_average%>
+                <svg class="icon__star icon ml-1">
+                  <use xlink:href="/css/icon.svg#icon-star-full"></use>
+                </svg>
+              </div>
+            </div>
+            <h4 class="category__description"><%= product.name%></h4>
+            <a href="/products/<%=product._id%>" class="category__link"
+              >Chi tiết</a
+            >
+          </div>
+          <%}%>
+        </div>
+        <%-include('../include/pagination.ejs')%>
+      </section>
+      <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

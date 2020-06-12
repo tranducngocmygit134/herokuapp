@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('../include/header.ejs')%>
+  <body>
+    <div class="container">
+      <%-include('../include/navigation.ejs')%>
+
+      <section class="review">
+        <div class="review__img">
+          <img src="<%= product.thumbnail_url%>" alt="thumbnail" />
+        </div>
+        <div class="review__description">
+          <div class="review__description--title">
+            <%= product.name%>
+          </div>
+          <div class="review__description--rating">
+            <span><%=product.rating_average%>/5</span>
+            <svg class="icon__star icon">
+              <use xlink:href="/css/icon.svg#icon-star-full"></use>
+            </svg>
+          </div>
+          <div class="review__description--price">
+            <%=product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g,
+            '$&,')%><sup>đ</sup>
+          </div>
+          <div class="review__description--description">
+            <%=product.short_description%>
+          </div>
+          <div class="review__description--buy">
+            <div>
+              Buy Now
+              <svg class="icon__shopping-cart icon">
+                <use xlink:href="/css/icon.svg#icon-shopping-cart"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="review__origin">
+          <%for(let i = 0 ; i < product.review.specifications.length; i++) {%>
+          <div class="review__origin--title">
+            <%=product.review.specifications[i].name%>
+          </div>
+          <%for(let el of product.review.specifications[i].attributes) {%>
+          <div class="review__origin--name"><%=el.name%></div>
+          <div><%=el.value%></div>
+          <%}%> <%}%>
+          <div class="review__origin--title">Nhận xét người dùng</div>
+        </div>
+        <%for(let el of product.review.comments) {%>
+        <div class="review__comment">
+          <div class="comment__user--info">
+            <div class="comment__user--img">
+              <div class="comment__user--bg">
+                <div>
+                  <%=el.created_by.name.split(' ')[0][0] %>
+                </div>
+              </div>
+            </div>
+            <div><%= el.created_by.name%></div>
+          </div>
+          <div class="comment__rating">
+            <span><%=el.rating%>/5</span>
+            <%for(let i = 0 ; i < el.rating ; i++) {%>
+            <svg class="icon__star icon">
+              <use xlink:href="/css/icon.svg#icon-star-full"></use>
+            </svg>
+            <%}%>
+            <div><%=el.title%></div>
+          </div>
+          <div class="comment__text">
+            <%=el.content%>
+          </div>
+          <div class="comment__img">
+            <%for(let img of el.images) {%>
+            <div>
+              <img src="<%=img.full_path%>" alt="image" />
+            </div>
+            <%}%>
+          </div>
+        </div>
+        <%}%>
+      </section>
+      <%-include('../include/footer.ejs')%>
+    </div>
+  </body>
+</html>

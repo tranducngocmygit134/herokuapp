@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../public/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="user ml-lg">
+          <a href="/user/change-info" class="user__info">
+            <svg class="user__icon">
+              <use xlink:href="./../public/css/icon.svg#icon-user"></use>
+            </svg>
+          </a>
+          <p class="user__info">
+            <span class="user__active">&bull;</span>
+          </p>
+        </div>
+        <div class="search">
+          <form action="#">
+            <input type="text" required />
+            <svg class="search__icon">
+              <use xlink:href="./../public/css/icon.svg#icon-search"></use>
+            </svg>
+          </form>
+        </div>
+
+        <div class="navigation">
+          <input
+            type="checkbox"
+            class="navigation__checkbox"
+            id="navigation-toggle"
+          />
+          <label for="navigation-toggle" class="navigation__button">
+            <svg class="navigation__button--show">
+              <use xlink:href="./../public/css/icon.svg#icon-menu"></use>
+            </svg>
+            <svg class="navigation__button--exits">
+              <use xlink:href="./../public/css/icon.svg#icon-cross"></use>
+            </svg>
+          </label>
+          <div class="navigation__background"></div>
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Login</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Signup</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Order</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Home</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!--<h2 class="heading-2 ml-lg">Categories</h2>
+      <section class="categories">
+        <div class="category">
+          <img
+            src="https://salt.tikicdn.com/cache/280x280/ts/product/bb/37/9c/23a0437ae9c6911db6caa4ca873e09c7.jpg"
+            alt="Laptop"
+            class="category__img"
+          />
+          <svg class="category__shop">
+            <use xlink:href="./../public/css/icon.svg#icon-laptop"></use>
+          </svg>
+          <h3 class="category__name">Laptop, Ipad</h3>
+          <h4 class="category__description">Lap top ban chay</h4>
+          <a href="#" class="category__link">Go to laptop</a>
+        </div>
+        <div class="category">
+          <img
+            src="https://salt.tikicdn.com/cache/280x280/ts/product/ab/05/61/b3ef1d86739ec9c4eb776c55a81a73b6.jpg"
+            alt="camera"
+            class="category__img"
+          />
+          <svg class="category__shop">
+            <use xlink:href="./../public/css/icon.svg#icon-camera"></use>
+          </svg>
+          <h3 class="category__name">Camera</h3>
+          <h4 class="category__description">Camera ban chay</h4>
+          <a href="#" class="category__link">Go to camera</a>
+        </div>
+        <div class="category">
+          <img
+            src="https://salt.tikicdn.com/cache/280x280/ts/product/47/68/c1/d92025ecd0c5825c3639f93dedb121ed.jpg"
+            alt="Oto"
+            class="category__img"
+          />
+          <svg class="category__shop">
+            <use xlink:href="./../public/css/icon.svg#icon-bike"></use>
+          </svg>
+          <h3 class="category__name">Motobike</h3>
+          <h4 class="category__description">
+            Motobike ban chay Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Quas porro doloribus cum eaque nisi facilis odit
+            exercitationem explicabo eos. Enim?
+          </h4>
+          <a href="#" class="category__link">Go to Motobike</a>
+        </div>
+      </section>-->
+      <!--<div class="auth">
+        
+      </div>-->
+      <!-- Change info -->
+      <!--<div class="info">
+        <form action="#">
+          <input type="text" placeholder="Change name" />
+          <input type="password" placeholder="Change password" />
+          <input type="password" placeholder="Confirm password" />
+          <input type="text" placeholder="Change photo" />
+          <button type="submit" class="auth__btn mt-large">Change</button>
+        </form>
+      </div>-->
+
+      <!-- Review -->
+      <!--<section class="review">
+        <div class="review__img">
+          <img
+            src="https://salt.tikicdn.com/cache/280x280/ts/product/a5/bd/5c/a8cf273bb33c67d409881164119782fa.jpg"
+            alt="thumbnail"
+          />
+        </div>
+        <div class="review__description">
+          <div class="review__description--title">
+            Smart Tivi Samsung 55 inch 4K UHD UA55NU7090KXXV - Hàng Chính Hãng
+          </div>
+          <div class="start_icon">
+            5 start
+          </div>
+          <div class="review__description--price">8.890.000<sup>d</sup></div>
+          <div class="review__description--description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            tenetur, enim dignissimos soluta odio molestias quam repudiandae
+            repellendus sapiente optio. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Incidunt, vitae.
+          </div>
+          <div class="review__description--buy">
+            <div>
+              Buy Now
+              <svg class="icon__shopping-cart icon">
+                <use
+                  xlink:href="./../public/css/icon.svg#icon-shopping-cart"
+                ></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="review__origin">
+          <div class="review__origin--title">Thông tin chi tiết</div>
+          <div>Công ty phát hành</div>
+          <div>McGraw-Hill Education</div>
+          <div>Ngày xuất bản</div>
+          <div>01-2017</div>
+          <div>Kích thước</div>
+          <div>19 x 27 x 3 cm</div>
+          <div>Loại bìa</div>
+          <div>Bìa mềm</div>
+          <div class="review__origin--title">Nhận xét người dùng</div>
+        </div>
+        <div class="review__comment">
+          <div class="comment__user--info">
+            <img
+              src="https://s240.avatar.talk.zdn.vn/d/d/e/6/8/240/f6f18a4d2e77dc930f29ac2e11ea293a.jpg"
+              alt="image user"
+            />
+            <div>Zalo Quang Tuan Bui</div>
+          </div>
+          <div class="comment__rating">
+            <svg class="icon__star icon">
+              <use xlink:href="./../public/css/icon.svg#icon-star-full"></use>
+            </svg>
+            <svg class="icon__star icon">
+              <use xlink:href="./../public/css/icon.svg#icon-star-full"></use>
+            </svg>
+            <svg class="icon__star icon">
+              <use xlink:href="./../public/css/icon.svg#icon-star-full"></use>
+            </svg>
+            <svg class="icon__star icon">
+              <use xlink:href="./../public/css/icon.svg#icon-star-full"></use>
+            </svg>
+            <div>Sách đẹp, giấy xịn nhưng hơi lóa</div>
+          </div>
+          <div class="comment__text">
+            Sách đẹp, giao hàng sớm, chất lượng sách tốt nhưng giấy xin màu trơn
+            bóng quá nên ánh sáng chiếu vào hơi bị lóa mắt. Mong nhà sách những
+            ấn bản sau không cần sử dụng loại giấy đắt tiền bóng quá 1 là đỡ tốn
+            chi phí giấy đắt đồng thời sẽ giảm được giá thành sách, 2 là đọc
+            sách đỡ bị lóa mắt. Cảm ơn./
+          </div>
+          <div class="comment__img">
+            <div class="comment__img--1">
+              <img
+                src="https://vcdn.tikicdn.com/cache/w170/ts/review/a3/35/a7/e96f2808c2f015907153ebb1f2245b09.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="comment__img--2">
+              <img
+                src="https://vcdn.tikicdn.com/cache/w170/ts/review/47/ac/ab/8c6b9b32a23f02be94aea6ff087f610a.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="comment__img--3">
+              <img
+                src="https://vcdn.tikicdn.com/cache/w170/ts/review/8f/9a/fb/a48f0e7c3f557659b594957abf137726.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="comment__img--4">
+              <img
+                src="https://vcdn.tikicdn.com/cache/w170/ts/review/21/58/5b/29c43cac6da76a3a9f5b9d47e8597f28.jpg"
+                alt="image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>-->
+
+      <div class="update mt-hg mb-hg">
+        <div class="update__avatar">
+          <img
+            src="https://ctt-sis.hust.edu.vn/Content/Anh/anh_20183806.png"
+            alt="user avater"
+          />
+        </div>
+        <div class="update__info">
+          <div class="content__box">Thông tin cá nhân</div>
+          <div>Tên</div>
+          <div>Trần Đức Ngọc</div>
+          <div>Ngày sinh</div>
+          <div>13/04/2000</div>
+          <div>Giới tính</div>
+          <div>Nam</div>
+          <div>Quê quán</div>
+          <div>Nam Dương, Nam Trực, Nam Định</div>
+          <div>Email</div>
+          <div>tdn@gmail.com</div>
+          <div>Nghề nghiệp</div>
+          <div>Sinh viên</div>
+          <div>Công ty</div>
+          <div>Hust</div>
+          <div>Sở thích</div>
+          <div>Chơi game, code</div>
+        </div>
+        <div class="update__change">
+          <div class="content__box mt-large mb-sm">
+            Cập nhật thông tin cá nhân
+          </div>
+          <form action="#">
+            <input type="text" placeholder="Cập nhật tên" />
+            <input type="text" placeholder="Cập nhật ngày sinh" />
+            <input type="text" placeholder="Cập nhật quê quán" />
+            <input type="text" placeholder="Cập nhật email" />
+            <input type="text" placeholder="Cập nhật nghề nghiệp" />
+            <input type="text" placeholder="Cập nhật công ty" />
+            <input type="text" placeholder="Cập nhật sở thích" />
+            <input type="text" placeholder="Cập nhật avatar" />
+            <button type="submit" class="auth__btn mt-large">Change</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <ul class="nav">
+          <div class="nav__item">
+            <a href="#">About us</a>
+          </div>
+          <div class="nav__item">
+            <a href="#">Contact us</a>
+          </div>
+          <div class="nav__item">
+            <a href="#">Support</a>
+          </div>
+          <div class="nav__item">
+            <a href="#">Download apps</a>
+          </div>
+        </ul>
+        <p class="copyright">&copy; copyright 2020 by TDN</p>
+      </footer>
+    </div>
+  </body>
+</html>

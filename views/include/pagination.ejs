@@ -1,0 +1,28 @@
+<div class="pagination mt-md">
+  <%if(maxPage) {%>
+  <div class="page__description mr-sm">
+    <p>Page <%=currentPage%> of <%=maxPage%>:</p>
+  </div>
+  <%}%>
+  <ul class="page">
+    <%if(currentPage != 1){%>
+    <li><a href="<%=path%>&page=1">1</a></li>
+    <%}%> <%if(hasPrevPage){%>
+    <li>
+      <a href="<%=path%>&page=<%=currentPage - 1%>">... <%=currentPage - 1%></a>
+    </li>
+    <%}%> <%if(currentPage){%>
+    <li class="page__active">
+      <a href="<%=path%>&page=<%=currentPage%>"><%=currentPage%></a>
+    </li>
+    <%}%> <%if(hasNextPage){%>
+    <li>
+      <a href="<%=path%>&page=<%=currentPage + 1%>"><%=currentPage + 1%> ...</a>
+    </li>
+    <%}%> <%if(maxPage && currentPage != maxPage){%>
+    <li>
+      <a href="<%=path%>&page=<%=maxPage%>"><%=maxPage%></a>
+    </li>
+    <%}%>
+  </ul>
+</div>

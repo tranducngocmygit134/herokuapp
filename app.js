@@ -43,7 +43,7 @@ const limiter = rateLimit({
   message: 'Too many request, please try again in 10 min',
 });
 // Limit request abs
-app.use('/api', limiter);
+//app.use('/api', limiter);
 // Nosql injection
 
 app.use(compression());
